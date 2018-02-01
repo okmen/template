@@ -7,22 +7,25 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.srdz.dao.EErrorsMapper;
 import com.srdz.entity.EErrors;
-import com.srdz.service.EErrorsService;
+import com.srdz.service.IEErrorService;
 
 
 @Controller
 @RequestMapping(value = "/test")
 public class TestController {
 	@Autowired
-	private EErrorsService errorMapper;
+	private EErrorsMapper errorMapper;
+	@Autowired
+	private IEErrorService errorService;
+	
 	
 	@ResponseBody
 	@RequestMapping(value = "/pushOrder")
 	public String downloadorder(long a) throws Exception {
 		try {
-			EErrors mode= errorMapper.selectById(a);
+			EErrors mode= errorService.selectById(a);
 			if(mode!=null){
-				return mode.getClassname();
+				return mode.getCreatetime().toGMTString();//ss
 			}
 		} catch (Exception e) {
 			// TODO: handle exception

@@ -1,8 +1,8 @@
 package com.srdz.service;
 
 import com.baomidou.mybatisplus.service.IService;
-import com.srdz.dao.EErrorsMapper;
+import com.srdz.entity.EErrors;
 
-public interface IEErrorService extends IService<EErrorsMapper> {
 
+public interface IEErrorService extends IService<EErrors>{
 }
