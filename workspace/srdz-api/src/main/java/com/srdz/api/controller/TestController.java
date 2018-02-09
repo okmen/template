@@ -5,7 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.srdz.dao.EErrorsMapper;
 import com.srdz.entity.EErrors;
 import com.srdz.service.IEErrorService;
 
@@ -13,8 +12,6 @@ import com.srdz.service.IEErrorService;
 @Controller
 @RequestMapping(value = "/test")
 public class TestController {
-	@Autowired
-	private EErrorsMapper errorMapper;
 	@Autowired
 	private IEErrorService errorService;
 	

@@ -5,4 +5,5 @@ import com.srdz.entity.EErrors;
 
 
 public interface IEErrorService extends IService<EErrors>{
+	
 }

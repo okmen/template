@@ -70,7 +70,7 @@
 		<property name="dataSource" ref="dataSource" />
 		<property name="mapperLocations" value="classpath:com/srdz/mapper/*.xml"/>
         <!-- 配置包别名 -->
-        <property name="typeAliasesPackage" value="com.srdz.entity.*"/>
+        <property name="typeAliasesPackage"  value="com.baomidou.springmvc.model"/>
 		<property name="plugins">
 			<array>
 				<!-- 分页插件配置 -->
