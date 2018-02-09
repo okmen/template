@@ -7,6 +7,9 @@
         <dependent-module archiveName="srdz-base-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/srdz-base/srdz-base">
             <dependency-type>uses</dependency-type>
         </dependent-module>
+        <dependent-module archiveName="utils-max-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/utils-max/utils-max">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
         <property name="context-root" value="srdz-api"/>
         <property name="java-output-path" value="/srdz-api/target/classes"/>
     </wb-module>

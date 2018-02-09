@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.srdz.entity.EErrors;
 import com.srdz.service.IEErrorService;
+import com.utils_max.ParseUtils;
 
 
 @Controller
@@ -18,9 +19,9 @@ public class TestController {
 	
 	@ResponseBody
 	@RequestMapping(value = "/pushOrder")
-	public String downloadorder(long a) throws Exception {
+	public String downloadorder(String a) throws Exception {
 		try {
-			EErrors mode= errorService.selectById(a);
+			EErrors mode= errorService.selectById(ParseUtils.parseLong(a));
 			if(mode!=null){
 				return mode.getCreatetime().toGMTString();//ss
 			}
