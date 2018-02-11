@@ -80,7 +80,7 @@
 	  <!-- MyBatis 动态扫描  -->
     <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
        <!--  <property name="basePackage" value="com.baomidou.springmvc.mapper"/> -->
-         <property name="basePackage" value="com.srdz.dao"/>
+         <property name="basePackage" value="com.srdz.mapper"/>
     </bean>
 	 <!-- 对数据源进行事务管理 -->
 	<bean id="transactionManager"

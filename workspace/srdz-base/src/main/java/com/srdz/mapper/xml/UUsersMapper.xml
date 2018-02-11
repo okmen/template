@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.srdz.mapper.UUsersDao">
+
+    <!-- 开启二级缓存 -->
+    <cache type="org.mybatis.caches.ehcache.LoggingEhcache"/>
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.srdz.entity.UUsers">
+        <id column="UserID" property="UserID" />
+        <result column="PassWord" property="PassWord" />
+        <result column="MobilePhone" property="MobilePhone" />
+        <result column="MobileBind" property="MobileBind" />
+        <result column="Status" property="Status" />
+        <result column="Identity" property="Identity" />
+        <result column="UserImg" property="UserImg" />
+        <result column="NickName" property="NickName" />
+        <result column="Email" property="Email" />
+        <result column="CreateTime" property="CreateTime" />
+        <result column="Sign" property="Sign" />
+        <result column="Birthday" property="Birthday" />
+        <result column="UpUserId" property="UpUserId" />
+        <result column="SourseUserId" property="SourseUserId" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        UserID, PassWord, MobilePhone, MobileBind, Status, Identity, UserImg, NickName, Email, CreateTime, Sign, Birthday, UpUserId, SourseUserId
+    </sql>
+
+</mapper>
